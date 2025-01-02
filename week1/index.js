@@ -8,6 +8,10 @@
 
 // 1.1 範例
 const alexAge = 25;
+const alexMembershipID = "GYM2024-12345";
+const isRunningOnTreadmill = true;
+console.log(alexAge,alexMembershipID,isRunningOnTreadmill);
+
 
 // ### 題目二：變數命名練習
 // - 瑜伽團課 - 300 元
@@ -16,10 +20,10 @@ const alexAge = 25;
 // 情境：Alex 這個月的運動預算有 3000 元
 // 請修改以下中文變數名稱，讓他符合變數語意
 
-const 變數一 = 300;
-const 變數二 = 500;
-const 變數三 = 1500;
-const 變數四 = 3000;
+const YogaGroup = 300;
+const weightTrainingGroup = 500;
+const weightTraining1on1 = 1500;
+let AlexBudget = 3000;
 
 // ### 題目三：變數計算
 // 呈上題，Alex 想要規劃好自己的運動課程，需符合以下三個條件，請將花費總數計算在 AlexBudget 上，一起幫幫他吧！
@@ -27,17 +31,25 @@ const 變數四 = 3000;
 // 條件二：瑜伽團課只能一次買 3 堂
 // 條件三：一定要花到 2400 以上，並購買 5 堂課程
 
+AlexBudget=AlexBudget-(weightTrainingGroup+YogaGroup*3+weightTraining1on1)
 console.log(`Alex 買完課程了，他一共剩下 ${AlexBudget} 元`);
 
 // ### 題目四：線稿圖截圖，看圖宣告變數
 // 請參考資料夾內 q4.webp 圖片
 // 請依照你看到的內容來嘗試設計變數和值（至少 3 個）
+const totalPrice = 2520;
+let durationMinute= 50;
+const avgPrice = 180;
 
 // ### 題目五：布林值與變數定義，看是否有用對 const, let
 // 情境：Alex 在往健身房的路上，望向城市的風景，請描述她看到的一切，並宣告變數與賦予值
 // 4-1. Alex 在等紅綠燈，他抬頭看一下現在是紅燈，還有 28 秒綠燈（最多 3 個宣告）
 // 4-2. 目前一起等待的機車有 8 台
 // 4.3. Alex 望向天空，看到天上有 5 朵白雲和 1 顆太陽
+let countdown = 28;
+let cloud = 5;
+const sun =1;
+
 
 // ### 題目六：情境題：簡單變數計算
 // 情境：Alex 每天都會帶著 2000cc 的水壺
@@ -50,6 +62,9 @@ console.log(`Alex 買完課程了，他一共剩下 ${AlexBudget} 元`);
 
 let myWater = 2000; // 水壺容量
 myWater -= 500; // 早上喝了 500cc
+myWater -=800;//中午喝了800cc
+myWater += 1000;
+myWater -=700
 
 console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 
@@ -62,6 +77,12 @@ console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 
 let totalBill = 0;
 const machineUsePrice = 50;
+const groupClassPrice = 150;
+
+let machineUsePriceTotal = machineUsePrice*3;
+let groupClassesTotal = groupClassPrice*2;
+totalBill = machineUsePrice+groupClassesTotal;
+total = totalBill;
 
 console.log(
   `Anna 本週器械使用費共 ${machineUsePriceTotal} 元，團體課費用共 ${groupClassesTotal} 元，一共消費金額是 ${total}元`
@@ -71,20 +92,20 @@ console.log(
 // 情境：請依照以下程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 let a = 8; // 範例：宣告了一個 a 的變數，並賦予了一個 8 的數字型別
-let b = 0;
-a = 13;
-a = b + 4;
-a - b;
-b += 1;
+let b = 0; // 宣告了一個b的變數，並賦予一個0的數字型別
+a = 13; // 將13賦予值給變數 a
+a = b + 4; // 4 , 將變數b的值加上4並賦予給a變數
+a - b;  //4, 將變數a 減去 b 
+b += 1; //1 , 將b的值加上1
 
 // ### 題目九：型別查詢
 // 請不要觀看 console.log，透過註解告知解答每個變數的型別
-let c = 'world';
-let d = 456;
-let e = c + d;
-let f = false;
-let g = d + d;
-let h = f + g;
+let c = 'world'; //string
+let d = 456; // Number
+let e = c + d; // string
+let f = false; // boolean
+let g = d + d; //Number
+let h = f + g; // Number
 
 // 請從以下新增註解，告知上面每行各別是哪些型別
 // a 是 string
@@ -94,8 +115,10 @@ let h = f + g;
 // 情境：請依照程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 
-let numberArr1 = [5, 10, 15];
-let numberArr2 = numberArr1;
-numberArr2.push(20);
-numberArr2 = [25, 30, 35];
-console.log(numberArr1, numberArr2);
+let numberArr1 = [5, 10, 15]; //numberArr1 是Number Array
+let numberArr2 = numberArr1; //numberArr2 是Number Array，numberArr1陣列的引用賦給numberArr2
+numberArr2.push(20); // 將20加入numberArr2陣列中
+numberArr2 = [25, 30, 35]; //重新設定numberArr2陣列中的值
+console.log(numberArr1, numberArr2); //顯示兩陣列內容
+
+//答案： [5,10,15,20] [25,30,35]
