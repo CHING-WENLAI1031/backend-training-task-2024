@@ -12,10 +12,6 @@ const alexMembershipID = "GYM2024-12345";
 const isRunningOnTreadmill = true;
 console.log(alexAge,alexMembershipID,isRunningOnTreadmill);
 
-const alexMembershipID = "GYM2024-12345";
-const isRunningOnTreadmill = true;
-console.log(alexAge,alexMembershipID,isRunningOnTreadmill);
-
 
 // ### 題目二：變數命名練習
 // - 瑜伽團課 - 300 元
@@ -27,7 +23,7 @@ console.log(alexAge,alexMembershipID,isRunningOnTreadmill);
 const YogaGroup = 300;
 const weightTrainingGroup = 500;
 const weightTraining1on1 = 1500;
-let AlexBudget = 3000;
+const AlexMonthBudget = 3000;
 
 // ### 題目三：變數計算
 // 呈上題，Alex 想要規劃好自己的運動課程，需符合以下三個條件，請將花費總數計算在 AlexBudget 上，一起幫幫他吧！
@@ -35,14 +31,14 @@ let AlexBudget = 3000;
 // 條件二：瑜伽團課只能一次買 3 堂
 // 條件三：一定要花到 2400 以上，並購買 5 堂課程
 
-AlexBudget=AlexBudget-(weightTrainingGroup+YogaGroup*3+weightTraining1on1)
+AlexBudget=AlexMonthBudget-(weightTrainingGroup+YogaGroup*3+weightTraining1on1)
 console.log(`Alex 買完課程了，他一共剩下 ${AlexBudget} 元`);
 
 // ### 題目四：線稿圖截圖，看圖宣告變數
 // 請參考資料夾內 q4.webp 圖片
 // 請依照你看到的內容來嘗試設計變數和值（至少 3 個）
 const totalPrice = 2520;
-let durationMinute= 50;
+const durationMinute= 50;
 const avgPrice = 180;
 
 // ### 題目五：布林值與變數定義，看是否有用對 const, let
@@ -50,9 +46,11 @@ const avgPrice = 180;
 // 4-1. Alex 在等紅綠燈，他抬頭看一下現在是紅燈，還有 28 秒綠燈（最多 3 個宣告）
 // 4-2. 目前一起等待的機車有 8 台
 // 4.3. Alex 望向天空，看到天上有 5 朵白雲和 1 顆太陽
-let countdown = 28;
-let cloud = 5;
-const sun =1;
+let isRedlight = true;  // 是否紅燈
+let countdownForGreen = 28; // 還有28秒綠燈   
+let waitingMoto = 8; //等待的機車
+let cloud = 5; //白雲
+const sun =1; //太陽
 
 
 // ### 題目六：情境題：簡單變數計算
@@ -85,7 +83,7 @@ const groupClassPrice = 150;
 
 let machineUsePriceTotal = machineUsePrice*3;
 let groupClassesTotal = groupClassPrice*2;
-totalBill = machineUsePrice+groupClassesTotal;
+totalBill = machineUsePriceTotal+groupClassesTotal;
 total = totalBill;
 
 console.log(
@@ -121,8 +119,7 @@ let h = f + g; // Number
 
 let numberArr1 = [5, 10, 15]; //numberArr1 是Number Array
 let numberArr2 = numberArr1; //numberArr2 是Number Array，numberArr1陣列的引用賦給numberArr2
-numberArr2.push(20); // 將20加入numberArr2陣列中
+numberArr2.push(20); // 將20加入numberArr2陣列中,此時numberArr1也會同步更新
 numberArr2 = [25, 30, 35]; //重新設定numberArr2陣列中的值
 console.log(numberArr1, numberArr2); //顯示兩陣列內容
-
 //答案： [5,10,15,20] [25,30,35]
