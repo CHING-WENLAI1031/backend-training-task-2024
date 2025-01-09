@@ -70,7 +70,7 @@ myWater -=700
 
 console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 
-// ### 題目七：情境題：變數計算
+// ### 題目七：情境題：變數計算  > 
 // 情境：Anna 每週都會到單次計費型的健身房運動，週日運動結束後，想知道自己本週的消費金額，但結帳系統出了點問題，Anna 決定自己用 JS 來計算。
 // Anna 的總金額（totalBill）先從零開始計算。
 // 健身房計費為：每小時器械使用費 50 元，每堂團體課程費用 150 元
@@ -84,10 +84,10 @@ const groupClassPrice = 150;
 let machineUsePriceTotal = machineUsePrice*3;
 let groupClassesTotal = groupClassPrice*2;
 totalBill = machineUsePriceTotal+groupClassesTotal;
-total = totalBill;
+//total = totalBill;  //目前 total 這個變數並沒有被宣告，但因為傳參考的原因， total 會完全等於 totalBill (記憶體位置相同)，所以下方使用 total 是沒有問題的，不過這容易出現錯誤，像是後續要針對 total 處理時就很容易出現錯誤，所以建議要將 total 宣告變數或者下方直接帶入 totalBill 就可以了。
 
 console.log(
-  `Anna 本週器械使用費共 ${machineUsePriceTotal} 元，團體課費用共 ${groupClassesTotal} 元，一共消費金額是 ${total}元`
+  `Anna 本週器械使用費共 ${machineUsePriceTotal} 元，團體課費用共 ${groupClassesTotal} 元，一共消費金額是 ${totalBill}元`
 );
 
 // ### 題目八：變數重新賦予值
@@ -97,7 +97,7 @@ let a = 8; // 範例：宣告了一個 a 的變數，並賦予了一個 8 的數
 let b = 0; // 宣告了一個b的變數，並賦予一個0的數字型別
 a = 13; // 將13賦予值給變數 a
 a = b + 4; // 4 , 將變數b的值加上4並賦予給a變數
-a - b;  //4, 將變數a 減去 b 
+a - b;  //4, 將變數a 減去 b  ，並未賦予值 //．可以在 a-b 的部分加上並未賦值，能更清楚這段程式碼的意義。
 b += 1; //1 , 將b的值加上1
 
 // ### 題目九：型別查詢
