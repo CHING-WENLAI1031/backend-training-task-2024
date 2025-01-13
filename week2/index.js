@@ -210,7 +210,7 @@ if(performanceData.coaches[0].performance<50000){
 
 // 練習：第二位教練（可將下方程式碼註解移除，完成答題）
 if(performanceData.coaches[1].performance<50000){
-  performanceData.coaches[0].performance+=(50000-performanceData.coaches[1].performance)
+  performanceData.coaches[1].performance+=(50000-performanceData.coaches[1].performance)
 }
 
 console.log(performanceData);
