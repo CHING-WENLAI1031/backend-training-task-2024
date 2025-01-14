@@ -78,10 +78,10 @@ let baseBonus = 6000; // 基本獎金
 let coachBonus = baseBonus; // 教練業績獎金帳單，並已加入條件一基本獎金
 
 // 練習：計算教練業績獎金
-if(coachIncome <= 10000){
+if(coachIncome <= 100000){
   coachBonus += coachIncome * 0.1;
 
-}else if(coachIncome> 10000 && coachIncome <= 300000){
+}else if(coachIncome> 100000 && coachIncome <= 300000){
   coachBonus += coachIncome * 0.15;
 }else{
   coachIncome +=coachIncome*0.2;
@@ -205,12 +205,12 @@ let performanceData = {
 // 練習：第一位教練（可將下方程式碼註解移除，完成答題）
 
 if(performanceData.coaches[0].performance<50000){
-  performanceData.coaches[0].performance+=(50000-performanceData.coaches[0].performance);
+  performanceData.coaches[0].performance=50000;
 }
 
 // 練習：第二位教練（可將下方程式碼註解移除，完成答題）
 if(performanceData.coaches[1].performance<50000){
-  performanceData.coaches[1].performance+=(50000-performanceData.coaches[1].performance)
+  performanceData.coaches[1].performance=50000;
 }
 
 console.log(performanceData);
